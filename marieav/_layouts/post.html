@@ -1,0 +1,95 @@
+---
+layout: page
+---
+
+{% comment %}
+
+	Editorial by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+
+	Name:
+
+		Blog Post layout
+
+	Description:
+
+		A layout for individual Blog Posts.
+
+	Example:
+
+		---
+		layout: post
+		---
+
+{% endcomment %}
+<section class="fp">
+	<header>
+		<h1>{{ page.title }}</h1>
+		<p>{{ page.date | date: "%B %-d, %Y" }}</p>
+	</header>
+
+	{% if page.image %}
+		<span class="image fit">
+			<img src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}">
+		</span>
+	{% endif %}
+
+	{{ content }}
+	
+	<div class="post-nav">
+		  <p>
+			{% if page.previous.url %}
+			<a href="{{page.previous.url}}" class="button small"><span class="icon solid fa-backward"></span> {{page.previous.title}}</a>
+			{% endif %}
+		  </p>
+		  <p>
+			{% if page.next.url %}
+			<a href="{{page.next.url}}" class="button small">{{page.next.title}} <span class="icon solid fa-forward"></span></a>
+			{% endif %}
+		  </p>
+	</div>
+	
+	<header>
+	<h3>
+	<a class="twitter-share-button" 
+		href="https://twitter.com/intent/tweet" 
+		data-size="large"
+		data-text="Pic by Marie Av! — "
+		data-hashtags="MarieAvRP,throwabae"
+		data-via="throwabae"
+		data-dnt="false"
+		data-related="throwabae">
+		Tweet!
+		</a> </br>
+		Tweet about this pic!</h3>
+	</header>
+	
+	<div class="pinkbar">
+		<a class="twitter-timeline" 
+			data-width="100%" 
+			data-height="60vh" 
+			data-chrome="transparent"
+			data-link-color="#bb00bb" 
+			data-show-replies="true"
+			data-border-color="#f3a1c5" 
+			data-dnt="true"
+			href="https://twitter.com/throwabae?ref_src=twsrc%5Etfw">Tweets by throwabae</a>
+	</div>
+
+	<div class="pagead">
+		<ul>
+			<li>
+				<span class="image">
+				<img src="{{ site.baseurl }}/images/ughads.png" alt="Ad">
+				</span>
+			</li>
+			<li>
+				<span class="image ad">
+					<img src="{{ site.baseurl }}/images/728x90.png" alt="Ad">
+				</span>
+			</li>
+		</ul>
+	</div>
+
+</section>

@@ -1,0 +1,195 @@
+///
+/// Editorial by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Main */
+
+	#main {
+		@include vendor('flex-grow', '1');
+		@include vendor('flex-shrink', '1');
+		width: 100%;
+
+		> .inner {
+			@include padding(0, 6em);
+			margin: 0 auto;
+			max-width: 110em;
+			
+			.fp {
+				@include padding(2em, 9em);
+				
+				h3 {
+					color: _palette(accent);
+					text-align: center;
+				
+					iframe {
+						box-shadow: 0px 0px 12px 0 _palette(accent) !important;
+					}
+				}
+			}
+
+			.post-nav {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+
+				p {
+					flex: 1 1 0;
+					width: 45%;
+					
+					a {
+						border: none;
+					}
+				
+					&:first-child {
+						padding-right: 0.5em;
+					}
+
+					&:last-child {
+						padding-left: 0.5em;
+						text-align: right;
+					}
+				}
+			}
+
+			> section {
+				@include padding(2em, 0);
+				border-top: solid 2px _palette(border);
+				
+				
+			.page2button {
+				padding-bottom: 3em;
+			}				
+				
+				&:first-of-type {
+				 	border-top: 0 !important;
+				}
+			}
+			
+			.pinkbar {
+				border-bottom: solid 3px _palette(accent);
+				border-top: solid 3px _palette(accent);
+				margin: 3rem 0;
+				padding: 3rem;
+
+				iframe {
+					box-shadow: 3px 3px 12px 0 _palette(accent) !important;
+					padding: 2rem !important;
+				
+				}
+			
+			}
+						
+			
+			.pagead {
+				padding-top: 4em;
+				
+				ul {
+					display: flex;
+					@include vendor('justify-content', 'center');
+					cursor: default;
+					list-style: none;
+					margin-left: 0;
+					padding-left: 0;
+					width: 100%;
+
+					li {
+						padding: 0 0 0 (_size(element-margin) * 0.5);
+						vertical-align: middle;
+						
+						&:first-child {
+						padding-left: 0;
+						padding-top: 1em;
+						}
+					}				
+				}
+			}
+			
+			
+		}
+
+		@include breakpoint('<=xlarge') {
+			> .inner {
+				@include padding(0, 5em);
+				
+				.fp {
+					@include padding(2em, 9em);
+				}
+
+				> section {
+					@include padding(2em, 0);
+				}
+			}
+		}
+
+		@include breakpoint('<=large') {
+			> .inner {
+				@include padding(0, 4em);
+
+				.fp {
+					@include padding(2em, 0em);
+				}
+
+				> section {
+					@include padding(2em, 0);
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			> .inner {
+				@include padding(0, 2em);
+
+				> section {
+					@include padding(1em, 0);
+				}
+				
+			.pinkbar {
+			margin: 2rem 0;
+			padding: 2rem 0;
+
+				iframe {
+				padding: 1rem !important;
+				
+				}
+			
+			}				
+				.pagead {
+				padding-top: 2em;
+				
+					ul {
+					@include vendor('flex-direction', 'column');
+					margin-left: 0;
+					width: 100% !important;
+					
+						li {
+							@include vendor('flex-grow', '1');
+							@include vendor('flex-shrink', '1');
+							padding: (_size(element-margin) * 0.1) 0 0 0;
+							text-align: center;
+							width: 100%;
+
+							> * {
+								width: 100%;
+							}
+
+							&:first-child {
+								padding-top: 0;
+								padding-bot: 0;
+							}
+						}
+					}
+					
+					img {
+						width: initial;
+						max-width: 100%;
+					}
+					
+				}
+				
+				
+				
+			}
+		}
+	}

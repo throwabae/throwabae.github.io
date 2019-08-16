@@ -1,0 +1,21 @@
+# Site settings
+title: Marie Av
+tagline: <span class="icon solid fa-camera-retro"></span> Photographer of Beautiful People
+description: > # this means to ignore newlines until "baseurl:"
+  Throwabae role plays as Marie Av, photographer of beautiful people. Check out the blog for the latest snaps, view the Twitch stream for the live action, and browse the store for some witchy stickers <3
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://example.com" # the base hostname & protocol for your site
+
+# Plugins
+plugins:
+- jekyll-paginate
+
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: assets/sass
+
+# Pagination
+paginate: 6
+paginate_path: "/blog/page:num/"

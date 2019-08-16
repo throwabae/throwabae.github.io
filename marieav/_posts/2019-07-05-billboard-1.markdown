@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Billboard #1"
+date:   2019-07-05 05:27:07 -0600
+categories: billboards
+image: /images/pic04.jpg
+---
+
+Los Santos has some fascinating billboards.
